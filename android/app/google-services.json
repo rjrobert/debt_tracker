@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "110962054021",
+    "firebase_url": "https://baby-names-app-db-7426e.firebaseio.com",
+    "project_id": "baby-names-app-db-7426e",
+    "storage_bucket": "baby-names-app-db-7426e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110962054021:android:0d72357d74f36d0d38aaec",
+        "android_client_info": {
+          "package_name": "com.example.notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110962054021-h4s12d2s14c0nlrf1efl08ef9uo7qkco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM63YTleGcv-tTXNt-7xdzH8Ia29e_9Io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110962054021-h4s12d2s14c0nlrf1efl08ef9uo7qkco.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "110962054021-npg9vdl8a6sq4c97a3mb5jdhlf1l9kuk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.blocFirestore"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110962054021:android:a989339bed40f7a138aaec",
+        "android_client_info": {
+          "package_name": "com.therobertball.debt_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110962054021-cbgfpmfg4pfqb6d8sc9qtuai7fjhhu72.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.therobertball.debt_tracker",
+            "certificate_hash": "b4a7968d89c081fc951b851a4bb9c762ad5a8d09"
+          }
+        },
+        {
+          "client_id": "110962054021-h4s12d2s14c0nlrf1efl08ef9uo7qkco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM63YTleGcv-tTXNt-7xdzH8Ia29e_9Io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110962054021-h4s12d2s14c0nlrf1efl08ef9uo7qkco.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "110962054021-npg9vdl8a6sq4c97a3mb5jdhlf1l9kuk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.blocFirestore"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

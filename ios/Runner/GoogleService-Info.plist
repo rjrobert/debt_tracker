@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>110962054021-3e4re2lbjpdv1nnd4v82q0juq7n4svms.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.110962054021-3e4re2lbjpdv1nnd4v82q0juq7n4svms</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>110962054021-cbgfpmfg4pfqb6d8sc9qtuai7fjhhu72.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBePWojNo9co2Bkr8KCdKOhABx1oKK9HU4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>110962054021</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.therobertball.debtTracker</string>
+	<key>PROJECT_ID</key>
+	<string>baby-names-app-db-7426e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>baby-names-app-db-7426e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:110962054021:ios:c886a242b25cc87e38aaec</string>
+	<key>DATABASE_URL</key>
+	<string>https://baby-names-app-db-7426e.firebaseio.com</string>
+</dict>
+</plist>
