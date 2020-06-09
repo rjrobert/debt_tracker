@@ -16,7 +16,6 @@ class RemoteConfigService {
     return remoteConfig;
   }
 
-  String get getSentryDsn => _remoteConfig.getString('sentry_dsn');
   String get getSyncFusionLicenseKey =>
       _remoteConfig.getString('syncfusion_license_key');
 }

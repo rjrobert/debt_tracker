@@ -2,11 +2,12 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'account.g.dart';
 
-@JsonSerializable(nullable: false)
+@JsonSerializable()
 class Account {
   final String documentId;
   final String name;
-  final double totalAmount;
+  final double originalAmount;
+  final double currentAmount;
   final double interest;
   final DateTime dueDate;
   final String userId;
@@ -14,7 +15,8 @@ class Account {
   Account(
     this.documentId,
     this.name,
-    this.totalAmount,
+    this.originalAmount,
+    this.currentAmount,
     this.interest,
     this.dueDate,
     this.userId,

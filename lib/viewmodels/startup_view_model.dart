@@ -21,8 +21,8 @@ class StartUpViewModel extends BaseViewModel {
 
     var hasUserLoggedIn = await _authenticationService.isUserLoggedIn();
 
-    if (hasUserLoggedIn) _navigationService.replaceWith(Routes.homeViewRoute);
-    // else
-    //   _navigationService.replaceWith(Routes.)
+    if (!hasUserLoggedIn) await _authenticationService.loginAnonymously();
+
+    _navigationService.replaceWith(Routes.accountListRoute);
   }
 }

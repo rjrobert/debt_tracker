@@ -13,6 +13,18 @@ class AuthenticationService {
   User _currentUser;
   User get currentUser => _currentUser;
 
+  Future loginAnonymously() async {
+    try {
+      var authResult = await _firebaseAuth.signInAnonymously();
+
+      await _populateCurrentUser(authResult.user);
+
+      return authResult.user != null;
+    } catch (e) {
+      return e.message;
+    }
+  }
+
   Future loginWithEmail({
     @required String email,
     @required String password,
@@ -29,29 +41,6 @@ class AuthenticationService {
     }
   }
 
-  Future signUpWithEmail({
-    @required String email,
-    @required String password,
-    @required String fullName,
-  }) async {
-    try {
-      var authResult = await _firebaseAuth.createUserWithEmailAndPassword(
-          email: email, password: password);
-
-      _currentUser = User(
-        userId: authResult.user.uid,
-        email: email,
-        fullName: fullName,
-      );
-
-      await _firestoreService.createUser(_currentUser);
-
-      return authResult.user != null;
-    } catch (e) {
-      return e.message;
-    }
-  }
-
   Future<bool> isUserLoggedIn() async {
     var user = await _firebaseAuth.currentUser();
     await _populateCurrentUser(user);
@@ -59,6 +48,23 @@ class AuthenticationService {
   }
 
   Future _populateCurrentUser(FirebaseUser user) async {
-    if (user != null) _currentUser = await _firestoreService.getUser(user.uid);
+    if (user != null)
+      try {
+        var userResult = await _firestoreService.getUser(user.uid);
+        if (userResult is User)
+          _currentUser = userResult;
+        else if (userResult is bool && !userResult) {
+          _currentUser = User(
+            userId: user.uid,
+            email: user.email,
+            fullName: user.displayName,
+          );
+
+          await _firestoreService.createUser(_currentUser);
+        } else
+          throw Exception('There was a problem retrieving the user data.');
+      } catch (e) {
+        return e.message;
+      }
   }
 }

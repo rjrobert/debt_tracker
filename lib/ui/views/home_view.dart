@@ -1,3 +1,4 @@
+import 'package:debt_tracker/ui/views/account_list.dart';
 import 'package:debt_tracker/viewmodels/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -13,9 +14,7 @@ class HomeView extends StatelessWidget {
             elevation: 0,
             title: Text('Home'),
           ),
-          body: Center(
-            child: Text(model.syncFusionKey),
-          ),
+          body: AccountList(),
         ),
       );
 }

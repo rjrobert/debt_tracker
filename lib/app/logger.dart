@@ -1,7 +1,6 @@
 import 'package:catcher/handlers/console_handler.dart';
 import 'package:catcher/handlers/sentry_handler.dart';
 import 'package:catcher/handlers/toast_handler.dart';
-import 'package:catcher/mode/dialog_report_mode.dart';
 import 'package:catcher/mode/silent_report_mode.dart';
 import 'package:catcher/model/catcher_options.dart';
 import 'package:sentry/sentry.dart';
