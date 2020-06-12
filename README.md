@@ -10,7 +10,8 @@ Create a new account with a name, current amount, interest rate, and due date. E
 
 [Flutter](https://flutter.dev) - Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.
 
-#####Architecture and platform
+#### Architecture and platform
+
 [Stacked](https://pub.dev/packages/stacked) - An architecture and widgets for an MVVM inspired architecture in Flutter. It provides common functionalities required to build a large application in a understandable manner.
 [Get_it](https://pub.dev/packages/get_it) - Service locator
 [Get](https://pub.dev/packages/get) - Easy navigation without context
@@ -18,10 +19,12 @@ Create a new account with a name, current amount, interest rate, and due date. E
 [Catcher](https://pub.dev/packages/catcher) - Plugin for error catching. Allows handling errors when they're not catched by developer.
 [Sentry](https://sentry.io) - Error tracking service
 
-#####[Firebase](https://firebase.google.com)
+#### [Firebase](https://firebase.google.com)
+
 [Auth](https://pub.dev/packages/firebase_auth)
 [Remote Config](https://pub.dev/packages/firebase_remote_config)
 [Cloud Firestore](https://pub.dev/packages/cloud_firestore)
 
-#####UI Elements
+#### UI Elements
+
 [Syncfusion Charts/Gauges](https://www.syncfusion.com) - Visualization library for creating beautiful and high-performance charts and guages
