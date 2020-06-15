@@ -1,7 +1,8 @@
 import 'package:debt_tracker/ui/widgets/account_card.dart';
-import 'package:debt_tracker/viewmodels/account_list_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
+import 'package:debt_tracker/ui/widgets/loading_list.dart';
+import 'package:debt_tracker/viewmodels/account_list_view_model.dart';
 
 class AccountList extends StatelessWidget {
   @override
@@ -12,17 +13,12 @@ class AccountList extends StatelessWidget {
           appBar: AppBar(
             title: Text('Account List'),
           ),
-          body: Expanded(
-            child: model.data != null
-                ? ListView.builder(
+          body: Center(
+            child: model.isBusy
+                ? LoadingList()
+                : ListView.builder(
                     itemBuilder: (context, index) => AccountCard(
                       account: model.data[index],
-                    ),
-                  )
-                : Center(
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation(
-                          Theme.of(context).primaryColor),
                     ),
                   ),
           ),

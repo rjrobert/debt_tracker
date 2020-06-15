@@ -17,7 +17,7 @@ class StartUpView extends StatelessWidget {
                 SizedBox(
                   width: 300,
                   height: 100,
-                  child: Text('test'),
+                  child: Image.asset('assets/images/money-bag.jpg'),
                 ),
                 CircularProgressIndicator(
                   strokeWidth: 3,
