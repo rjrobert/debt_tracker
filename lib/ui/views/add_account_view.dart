@@ -19,7 +19,7 @@ class AddAccountView extends StatelessWidget {
             title: model.editing ? Text('Edit Account') : Text('New Account'),
           ),
           body: AccountForm(
-            initialValue: model.editing ?? editingAccount.toJson(),
+            initialValue: model.editing ? editingAccount.toJson() : {},
             onSubmit: (data) => model.addAccount(data),
           ),
         ),

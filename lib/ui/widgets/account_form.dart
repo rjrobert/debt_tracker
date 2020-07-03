@@ -40,11 +40,15 @@ class _AccountFormState extends State<AccountForm> {
                     FormBuilderValidators.min(0),
                   ],
                 ),
-                FormBuilderTouchSpin(
+                FormBuilderTextField(
                   attribute: 'interest',
                   decoration: InputDecoration(labelText: 'Interest Rate'),
-                  initialValue: 1,
-                  step: 0.01,
+                  validators: [
+                    FormBuilderValidators.required(),
+                    FormBuilderValidators.required(),
+                    FormBuilderValidators.numeric(),
+                    FormBuilderValidators.min(0),
+                  ],
                 ),
                 FormBuilderDateTimePicker(
                   attribute: 'dueDate',

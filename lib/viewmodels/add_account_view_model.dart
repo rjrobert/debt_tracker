@@ -20,6 +20,7 @@ class AddAccountViewModel extends BaseViewModel {
 
   Future addAccount(Map<String, dynamic> data) async {
     setBusy(true);
+    print(data);
 
     data['userId'] = _authenticationService.currentUser.userId;
     var result;

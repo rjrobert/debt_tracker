@@ -11,9 +11,9 @@ class AccountCard extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            const ListTile(
-              title: Text('Card Title'),
-              subtitle: Text('Card Subtitle'),
+            ListTile(
+              title: Text(account.name),
+              subtitle: Text(account.currentAmount.toString()),
             )
           ],
         ),

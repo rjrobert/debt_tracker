@@ -17,6 +17,7 @@ class AccountList extends StatelessWidget {
             child: model.isBusy
                 ? LoadingList()
                 : ListView.builder(
+                    itemCount: model.data.length,
                     itemBuilder: (context, index) => AccountCard(
                       account: model.data[index],
                     ),
