@@ -4,11 +4,13 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 class AccountForm extends StatefulWidget {
   final Map<String, dynamic> initialValue;
   final Function(Map<String, dynamic>) onSubmit;
+  final Function onCancel;
 
   const AccountForm({
     Key key,
     this.initialValue,
     this.onSubmit,
+    this.onCancel,
   }) : super(key: key);
 
   @override
@@ -69,7 +71,10 @@ class _AccountFormState extends State<AccountForm> {
               ),
               MaterialButton(
                 child: Text('Cancel'),
-                onPressed: () => _fbKey.currentState.reset(),
+                onPressed: () {
+                  _fbKey.currentState.reset();
+                  widget.onCancel();
+                },
               ),
             ],
           ),

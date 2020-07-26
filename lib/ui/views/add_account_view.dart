@@ -21,6 +21,7 @@ class AddAccountView extends StatelessWidget {
           body: AccountForm(
             initialValue: model.editing ? editingAccount.toJson() : {},
             onSubmit: (data) => model.addAccount(data),
+            onCancel: () => model.cancel(),
           ),
         ),
       );

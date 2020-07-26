@@ -23,6 +23,7 @@ class AddAccountViewModel extends BaseViewModel {
     print(data);
 
     data['userId'] = _authenticationService.currentUser.userId;
+    data['currentAmount'] = data['originalAmount'];
     var result;
 
     if (!editing) {
@@ -49,4 +50,6 @@ class AddAccountViewModel extends BaseViewModel {
 
     _navigationService.back();
   }
+
+  void cancel() => _navigationService.back();
 }

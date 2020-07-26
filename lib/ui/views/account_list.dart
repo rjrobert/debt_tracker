@@ -16,12 +16,14 @@ class AccountList extends StatelessWidget {
           body: Center(
             child: model.isBusy
                 ? LoadingList()
-                : ListView.builder(
-                    itemCount: model.data.length,
-                    itemBuilder: (context, index) => AccountCard(
-                      account: model.data[index],
-                    ),
-                  ),
+                : model.data == null
+                    ? Text('No Accounts Created')
+                    : ListView.builder(
+                        itemCount: model.data.length,
+                        itemBuilder: (context, index) => AccountCard(
+                          account: model.data[index],
+                        ),
+                      ),
           ),
           floatingActionButton: FloatingActionButton(
             child: Icon(Icons.add),

@@ -48,7 +48,7 @@ class FirestoreService {
 
       return user;
     } catch (e) {
-      return e.message;
+      return false;
     }
   }
 

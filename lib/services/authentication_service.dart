@@ -48,23 +48,24 @@ class AuthenticationService {
   }
 
   Future _populateCurrentUser(FirebaseUser user) async {
-    if (user != null)
-      try {
-        var userResult = await _firestoreService.getUser(user.uid);
-        if (userResult is User)
-          _currentUser = userResult;
-        else if (userResult is bool && !userResult) {
-          _currentUser = User(
-            userId: user.uid,
-            email: user.email,
-            fullName: user.displayName,
-          );
+    if (user != null) {
+      // try {
+      var userResult = await _firestoreService.getUser(user.uid);
+      if (userResult is User)
+        _currentUser = userResult;
+      else if (userResult is bool && !userResult) {
+        _currentUser = User(
+          userId: user.uid,
+          email: user.email,
+          fullName: user.displayName,
+        );
 
-          await _firestoreService.createUser(_currentUser);
-        } else
-          throw Exception('There was a problem retrieving the user data.');
-      } catch (e) {
-        return e.message;
-      }
+        await _firestoreService.createUser(_currentUser);
+      } else
+        throw Exception('There was a problem retrieving the user data.');
+    }
+    // } catch (e) {
+    //   return e.message;
+    // }
   }
 }

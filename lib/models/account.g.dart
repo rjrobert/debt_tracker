@@ -10,10 +10,12 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
   return Account(
     json['documentId'] as String,
     json['name'] as String,
-    (json['originalAmount'] as num)?.toDouble(),
-    (json['currentAmount'] as num)?.toDouble(),
-    (json['interest'] as num)?.toDouble(),
-    json['dueDate'] == null ? null : DateTime.parse(json['dueDate'] as String),
+    num.tryParse(json['originalAmount'].toString())?.toDouble(),
+    num.tryParse(json['currentAmount'].toString())?.toDouble(),
+    num.tryParse(json['interest'].toString())?.toDouble(),
+    json['dueDate'] == null
+        ? null
+        : DateTime.tryParse(json['dueDate'].toString()),
     json['userId'] as String,
   );
 }
